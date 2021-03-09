@@ -16,7 +16,7 @@ print('========++++++++++++=========')
 word = 'Java'
 index = 0
 while True:
-    count = word.count(word[index],index,len(word))
+    count = word.count(word[index], index, len(word))
     print(word[index], count)
     index += 1
     if index == len(word) - 1:
@@ -72,7 +72,7 @@ print('========++++++++++++=========')
 # replace()
 hello = "Hello There"
 print(hello)
-hello = hello.replace('Hello','Hi')
+hello = hello.replace('Hello', 'Hi')
 print(hello)
 
 print('========++++++++++++=========')
