@@ -46,7 +46,7 @@ print(shpList)
 
 print('========++++++++++++=========')
 # logical operator
-list = [1,2,3,4]
+list = [1, 2, 3, 4]
 print(4 in list)
 print(5 not in list)
 
