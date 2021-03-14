@@ -2,9 +2,9 @@
 
 from collections import Counter
 
-def anagram():
-    str_1 = input("Enter the first word").lower()
-    str_2 = input("Enter the second word").lower()
+def anagram_v1():
+    str_1 = input("Enter the first word: ").lower()
+    str_2 = input("Enter the second word: ").lower()
     index = 0
     d_str_1 = dict()
     d_str_2 = dict()
@@ -14,29 +14,21 @@ def anagram():
         exit(0)
 
     while True:
-        count_1 = str_1.count(str_1[index], index, len(str_1))
-        count_2 = str_2.count(str_2[index], index, len(str_2))
+        count_1 = str_1.count(str_1[index])
+        count_2 = str_2.count(str_2[index])
         d_str_1[str_1[index]] = count_1
         d_str_2[str_2[index]] = count_2
         index += 1
         if index == len(str_1) - 1:
             break
 
-    print(d_str_1)
-    print(d_str_2)
 
-    t_str_1 = sorted(d_str_1)
-    t_str_2 = sorted(d_str_2)
-
-    print(t_str_1)
-    print(t_str_2)
-
-    if t_str_1.sort() == t_str_2.sort():
+    if d_str_1 == d_str_2:
         print('anagram')
     else:
         print('not anagram')
 
-# anagram()
+anagram_v1()
 
 
 # improved version lowering unnecessary code
@@ -81,7 +73,7 @@ def check(s1, s2):
 # driver code
 s1 = "listen"
 s2 = "silent"
-check(s1, s2)
+# check(s1, s2)
 
 # from internet
 def check(s1, s2):
@@ -96,4 +88,4 @@ def check(s1, s2):
 
 s1 = "listen"
 s2 = "silent"
-check(s1, s2)
+# check(s1, s2)
